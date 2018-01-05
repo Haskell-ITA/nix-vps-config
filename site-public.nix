@@ -5,7 +5,7 @@ let
   site-source = pkgs.fetchFromGitHub {
     owner = "haskell-ita";
     repo = "www_haskell-ita_it_website";
-    rev = "HEAD";
+    rev = "de3219697ead261919f567acd5aeaa0d946ee7b3";
     sha256 = "1isfw7rvmc2k6kvblzf623sq06fd4p11c77dnflwq5jjk4svld4i";
   };
 
