@@ -9,10 +9,10 @@ let
     sha256 = "1isfw7rvmc2k6kvblzf623sq06fd4p11c77dnflwq5jjk4svld4i";
   };
 
-  f = { fetchFromGitHub, base, binary, blaze-html, containers
+  f = { mkDerivation, base, binary, blaze-html, containers
       , filepath, hakyll, stdenv, time
       }:
-      stdenv.mkDerivation {
+      mkDerivation {
         pname = "www-haskell-ita";
         version = "0.1.0.0";
         src = site-source;
@@ -35,7 +35,7 @@ stdenv.mkDerivation {
   buildPhase = ''
     env \
       LANG=en_US.UTF-8 \
-      LOCALE_ARCHIVE=${glibcLocales.name}/lib/locale/locale-archive \
+      LOCALE_ARCHIVE=${glibcLocales}/lib/locale/locale-archive \
       ${site-builder}/bin/site build
   '';
   installPhase = ''
