@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  imports = [ ./mighttpd2.nix ];
+  imports = [ ./irc-logger ];
   nixpkgs.overlays = [ (import ./overlay) ];
   services.mighttpd2.enable = true;
   services.mighttpd2.config = ''
@@ -14,6 +14,10 @@
   services.mighttpd2.routing = ''
         [haskell-ita.it]
         / -> ${pkgs.haskell-ita-website}
+        [irc.fgaz.me]
+        #/archive/ -> /var/lib/irclog/archive/
+        # /lograw/ -> /var/lib/irclog/irc.freenode.net/#haskell.it/
+        / >> localhost:8001/
         [*]
         / -> ${pkgs.haskell-ita-website}
       '';

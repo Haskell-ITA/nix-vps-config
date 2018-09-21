@@ -7,8 +7,8 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "Haskell-ITA";
     repo = "irc";
-    rev = "993e37e73c9341b32bb1473e2740bbba68e9683e";
-    sha256 = "060m75r582v0z0672x2dpb6lk70q0nl1ss3siz9a3il4k2hhcqkq";
+    rev = "2ac5e56dd9feb7d01baebfd33da426f27f7b294b";
+    sha256 = "0zgz568ah0zd7w8dr5f36w12mdpcaqy1vgywsq28yniahgyjiimr";
   } + "/ircpager"; # ircpager subdirectory
   isLibrary = false;
   isExecutable = true;
