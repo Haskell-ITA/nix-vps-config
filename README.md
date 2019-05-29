@@ -21,5 +21,5 @@ Da fare:
 * [x] haskell-ita.it
 * [ ] ricompilazione automatica di haskell-ita.it a ogni push  
       (leggermente complicato)
-* [ ] irc logger
+* [x] irc logger
 
