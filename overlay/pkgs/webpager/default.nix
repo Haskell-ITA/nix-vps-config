@@ -7,8 +7,8 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "fgaz";
     repo = "webpager";
-    rev = "7d389e59d3a6499d9a05da273a1fb0309c83bf55";
-    sha256 = "1a5h1zapv9wmsrx3f2lsnsm2jh8d1l7wfz8dycz6ip5jdxx9hiq2";
+    rev = "f314f239328aff94af96bc6ab49964f66a44dae8";
+    sha256 = "104wr5ja77i9g64ay53kiblq74spksq2h4wry884ny2xs1yn7w2r";
   };
   libraryHaskellDepends = [
     base bytestring data-default-class hashable http-types lucid text
