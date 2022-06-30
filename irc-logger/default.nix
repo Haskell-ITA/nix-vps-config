@@ -10,6 +10,7 @@ in {
     users.irc-logger = {
       description = "Irc logger user";
       group = "irc-logger";
+      isSystemUser = true;
     };
     groups.irc-logger = { };
   };
