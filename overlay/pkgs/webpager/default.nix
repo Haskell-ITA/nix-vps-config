@@ -1,5 +1,5 @@
 { mkDerivation, base, bytestring, data-default-class, hashable
-, http-types, lucid, stdenv, text, wai, warp, fetchFromGitHub
+, http-types, lucid, lib, text, wai, warp, fetchFromGitHub
 }:
 mkDerivation {
   pname = "webpager";
@@ -7,8 +7,8 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "fgaz";
     repo = "webpager";
-    rev = "0d16df225a9c8f38d37f3ccd5bfca893ed6b8169";
-    sha256 = "1hp8vja3b28llbwwixms3hm3rii101i67n0vry8apwmq9k5yxylp";
+    rev = "53bd661ca30f7a15190c9bac6f5538e973ac3067";
+    sha256 = "sha256-ifLdVciunFL67uY43BljvJ5hfCYWzpg+fF81ZdWDpwQ=";
   };
   libraryHaskellDepends = [
     base bytestring data-default-class hashable http-types lucid text
@@ -17,5 +17,5 @@ mkDerivation {
   testHaskellDepends = [ base data-default-class warp ];
   homepage = "https://github.com/fgaz/webpager";
   description = "A generic pager for the web";
-  license = stdenv.lib.licenses.bsd3;
+  license = lib.licenses.bsd3;
 }

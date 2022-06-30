@@ -1,4 +1,4 @@
-{ mkDerivation, base, data-default-class, lucid, stdenv, warp
+{ mkDerivation, base, data-default-class, lucid, lib, warp
 , webpager, fetchFromGitHub
 }:
 mkDerivation {
@@ -7,13 +7,13 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "Haskell-ITA";
     repo = "irc";
-    rev = "7157ae0f5054cb6d9e6b5fcfd10a89e8311906e6";
-    sha256 = "1iv09bn4c22jmgm84hlp50mj3qqb8yf8r7z1ixkc4lk16i3x5b51";
+    rev = "c2a713d4079d9ad725c8ec4ab6bab2a8784e3e50";
+    sha256 = "sha256-rkGx8wPm4tVDj+X6QfB1t0X7M1DQ8uIaSzDWW1iSTZ8=";
   } + "/ircpager"; # ircpager subdirectory
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
     base data-default-class lucid warp webpager
   ];
-  license = stdenv.lib.licenses.bsd3;
+  license = lib.licenses.bsd3;
 }
