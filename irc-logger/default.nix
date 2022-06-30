@@ -53,4 +53,13 @@ in {
       };
     };
   };
+  services.logrotate.enable = true;
+  services.logrotate.paths.irclog-haskell-ita = {
+    enable = true;
+    path = "/var/lib/irclog/${irc-server}/${irc-channel}/out";
+    keep = 10000;
+    user = "irc-logger";
+    group = "irc-logger";
+    frequency = "monthly";
+  };
 }
